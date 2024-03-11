@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\InvoiceItem;
-use App\Models\Car;
+// use App\Models\Car;
 use App\Models\Client;
-use App\Models\Setting;
 
 
 
@@ -49,9 +48,4 @@ class Invoice extends Model
     {
         return $this->hasMany(invoiceItem::class);
     }
-
-    // public function settings()
-    // {
-    //     return $this->belongsTo(Setting::class, 'compagny_id');
-    // }
 }

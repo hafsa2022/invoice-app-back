@@ -15,12 +15,6 @@ class UserController extends Controller
     }
 
 
-    public function addUser(Request $request)
-    {
-        $user = $this->userService->addUser($request);
-        return response()->json($user);
-    }
-
 
     public function getUser(Request $request)
     {
@@ -32,6 +26,5 @@ class UserController extends Controller
     {
         $user = $this->userService->updateInfo($request);
         return response()->json($user);
-        // return response()->json($request);
     }
 }

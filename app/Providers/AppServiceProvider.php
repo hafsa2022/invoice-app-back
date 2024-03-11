@@ -16,7 +16,6 @@ class AppServiceProvider extends ServiceProvider
         // Repositories
         $this->app->bind('App\Repositories\Interfaces\IUserRepository', 'App\Repositories\UserRepository');
         $this->app->bind('App\Repositories\Interfaces\IInvoiceRepository', 'App\Repositories\InvoiceRepository');
-        $this->app->bind('App\Repositories\Interfaces\ISettingRepository', 'App\Repositories\SettingRepository');
         $this->app->bind('App\Repositories\Interfaces\IClientRepository', 'App\Repositories\ClientRepository');
         $this->app->bind('App\Repositories\Interfaces\ICarRepository', 'App\Repositories\CarRepository');
         $this->app->bind('App\Repositories\Interfaces\IInvoiceItemRepository', 'App\Repositories\InvoiceItemRepository');
@@ -25,7 +24,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('App\Services\Interfaces\IUserService', 'App\Services\UserService');
         $this->app->bind('App\Services\Interfaces\IInvoiceService', 'App\Services\InvoiceService');
         $this->app->bind('App\Services\Interfaces\ICarService', 'App\Services\CarService');
-        $this->app->bind('App\Services\Interfaces\ISettingService', 'App\Services\SettingService');
         $this->app->bind('App\Services\Interfaces\IClientService', 'App\Services\ClientService');
         $this->app->bind('App\Services\Interfaces\IInvoiceItemService', 'App\Services\InvoiceItemService');
 

@@ -39,18 +39,9 @@ class InvoiceController extends Controller
 
     public function updateInvoice(Request $request)
     {
-        // return response()->json(["msg" => $request->id]);
         return response()->json($this->invoiceService->updateInvoice($request));
     }
 
-    // public function updateInvoice(Request $request)
-    // {
-    //        return response()->json([
-    //         "RE"=> "$request"
-    //     ]);
-
-    //     // return response()->json($this->invoiceService->addInvoice($request,$id));
-    // }
 
 
 }

@@ -57,26 +57,6 @@
         border-bottom: 1px solid #dee2e6;
     }
 
-    /* .table th {
-        background-color: #f8f9fa;
-        border-color: #dee2e6;
-        text-align: center;
-    } */
-
-    /* .table-bordered {
-        border: 1px solid #dee2e6;
-    } */
-
-    /* .table-bordered th,
-    .table-bordered td {
-        border: 1px solid #dee2e6;
-    } */
-
-    /* .table-condensed th,
-    .table-condensed td {
-        padding: 0.5rem;
-    } */
-
     .row {
         margin-right: -15px;
         margin-left: -15px;
@@ -123,7 +103,6 @@
 		margin-top: 20px;
         margin-bottom:0;
 		padding: 1rem;
-		/* text-align: center; */
         margin-right: -15px;
         margin-left: -15px;
         width:100%
@@ -164,9 +143,6 @@
                     <div class="row col"><strong><p><span class="float-start">Facture</span> <span class="float-end"> {{$invoice->id}}</span></p></strong></div>
                     <div class="row col"><p><span class="float-start">Date de facture</span> <span class="float-end"> {{ $invoice->date }}</span></p></div>
                     <div class="row col"><p><span class="float-start">Date d'échéance </span> <span class="float-end"> {{ $invoice->dueDate }}</span></p></div>
-                    <!-- <p>Date de facture :{{ $invoice->date }} </p> -->
-
-                    <!-- <p>Date d'échéance : {{ $invoice->dueDate }} </p> -->
                 </div>
             </div>
             <hr>

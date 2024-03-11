@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Invoice;
 
 
 class Setting extends Model
@@ -32,8 +31,5 @@ class Setting extends Model
         'bic_number2',
     ];
 
-    public function invoices()
-    {
-        return $this->hasMany(Invoice::class);
-    }
+
 }

@@ -31,9 +31,6 @@ class InvoiceRepository implements IInvoiceRepository
         $invoices = DB::table('invoices')
                     ->where("invoices.compagny_id",$compagnyId)
                     ->get();
-        // $invoices = Invoice::with(['invoiceItems','client'])
-        // ->where('compagny_id', $compagnyId)
-        // ->get();
 
          return DB::table('invoices')
                 ->orderBy('id','desc')

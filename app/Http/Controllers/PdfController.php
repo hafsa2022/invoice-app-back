@@ -23,10 +23,6 @@ class PdfController extends Controller
     $invoice = Invoice::where('id', $id)->first();
     $items = InvoiceItem::find($id);
 
-    // $items =  DB::table('invoice_items')
-    //                 ->where("invoice_items.invoice_id",'=',$id)
-    //                 ->get();
-
     $car = Car::find($invoice->car_id);
     $client = Client::find($invoice->client_id);
     $setting = Setting::find($invoice->compagny_id);

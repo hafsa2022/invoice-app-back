@@ -7,7 +7,6 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\InvoiceItemController;
-use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CarController;
 
@@ -26,7 +25,6 @@ use App\Http\Controllers\CarController;
 
 Route::controller(UserController::class)->group(function () {
 
-        // Route::post('signup','addUser');
 
         Route::post('login','getUser');
 
@@ -56,11 +54,6 @@ Route::controller(InvoiceItemController::class)->group(function () {
 
 });
 
-Route::controller(SettingController::class)->group(function () {
-
-        Route::get('getsetting/{id}','getSetting');
-
-});
 
 Route::controller(ClientController::class)->group(function () {
 
@@ -76,7 +69,5 @@ Route::controller(CarController::class)->group(function () {
 
 
 Route::get('/upload-invoice/{id}', [PdfController::class,'generatePdf']);
-
-Route::post('/update-language', [LanguageController::class,'updateLanguage']);
 
 
