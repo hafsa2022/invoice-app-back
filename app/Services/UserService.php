@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\App;
 
 
 
@@ -56,7 +57,8 @@ class UserService implements IUserService
         $user = $this->repository->getUser($request);
         return response()->json([
             "token"=>$token,
-            "user" => $user
+            "user" => $user,
+            // "lang" => App::getLocale()
         ]);
     }
 
@@ -68,7 +70,10 @@ class UserService implements IUserService
             "name"=>"required"
         ]);
 
+        $locale = $request->input('lang');
+
         $searchedUser = User::where('email', $request->email)->first();
+
         if($searchedUser){
 
             if($searchedUser->id != $request->id) {
@@ -78,18 +83,25 @@ class UserService implements IUserService
                 // return response()->json(["error" => "This email is already exist"],403);
 
             }else{
+                // if (in_array($locale, ['en', 'fr'])) {
+
+                //     session()->put('locale', $locale);
+
+                //     App::setLocale(session()->get('locale'));
+                // }
                 return $this->repository->updateInfo($request);
             }
         }else{
+                // if (in_array($locale, ['en', 'fr'])) {
+
+                //      App::setLocale(session()->get('locale'));
+
+                //     session()->put('locale', $locale);
+                // }
 
             return $this->repository->updateInfo($request);
-            //  return response()->json(["success" => "This email is cahnged"],200);
 
         }
-
-
-
-
     }
 
 
